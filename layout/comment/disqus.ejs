@@ -40,12 +40,12 @@ const SUPPORTED_LANGS = {
     'sv_SE': 'Swedish (Sweden)',
     'tr': 'Turkish',
     'uk': 'Ukrainian',
-    'vec': 'Venetian'
+    'vec': 'Venetian',
+    'zh_tw': "zh_TW"
 };
 
 function getDisqusLanguage(language) {
     // NOTE: 覆寫預設設定
-    return 'en'
     const variant = language.split(/[-_]/).map((l, i) => i === 0 ? l.toLowerCase() : l.toUpperCase()).join('_');
     if (SUPPORTED_LANGS.hasOwnProperty(variant)) {
         return variant;
@@ -53,7 +53,7 @@ function getDisqusLanguage(language) {
     if (SUPPORTED_LANGS.hasOwnProperty(variant.split('_')[0])) {
         return variant.split('_')[0];
     }
-    return 'en';
+    return 'zh_TW';
 }
 %>
 <script>

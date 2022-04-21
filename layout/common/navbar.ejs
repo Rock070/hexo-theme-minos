@@ -20,7 +20,7 @@
                     <img src="<%- url_for(get_config('logo')) %>" alt="" height="28">
                     <% } %>
                 <% } else { %>
-                <img src="<%- url_for('images/logo.png') %>" alt="" height="28">
+                <span>Rock070</span>
                 <% } %>
             </a>
             <div class="navbar-burger">
@@ -72,11 +72,7 @@
             </a>
                <% } %>
             <% } %>
-            <% if (page_language() === 'en') { %>
-               <a class="navbar-item" href="/">中文</a>
-            <% } else { %>
-                <a class="navbar-item" href="/en">English</a>
-            <% } %>
+            <% %>
             
 
         </div>
